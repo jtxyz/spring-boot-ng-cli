@@ -11,6 +11,11 @@ public class SpringBootNgCliApplication {
 
   @Controller
   static class AppController {
+    @GetMapping("/**/{:[^\\.]*}")
+    public String clientRoute() {
+      return "forward:/";
+    }
+
     @GetMapping("/")
     public String index(Model model) {
       model.addAttribute("message", "Greetings from Spring!");
