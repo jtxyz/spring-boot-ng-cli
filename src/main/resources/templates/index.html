@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
   <title>SpringBootNgCli</title>
@@ -9,6 +9,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+<h1 th:text="${message}"></h1>
+<th:block th:include="angular-app-index :: body" />
 </body>
 </html>

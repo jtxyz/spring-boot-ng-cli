@@ -13,6 +13,7 @@ public class SpringBootNgCliApplication {
   static class AppController {
     @GetMapping("/")
     public String index(Model model) {
+      model.addAttribute("message", "Greetings from Spring!");
       return "index";
     }
   }
